@@ -109,6 +109,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.3)
+    rack-cors (1.1.1)
+      rack (>= 2.0.0)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (6.1.4.6)
@@ -169,6 +171,9 @@ GEM
       rack (>= 1.1)
       rubocop (>= 1.7.0, < 2.0)
     ruby-progressbar (1.11.0)
+    seed-fu (2.3.9)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
     sexp_processor (4.16.0)
     spring (4.0.0)
     sprockets (4.0.3)
@@ -198,10 +203,12 @@ DEPENDENCIES
   listen (~> 3.3)
   pg (~> 1.1)
   puma (~> 5.0)
+  rack-cors
   rails (~> 6.1.4)
   rails_best_practices
   rubocop (~> 1.26)
   rubocop-rails
+  seed-fu (~> 2.3)
   spring
   tzinfo-data
 
