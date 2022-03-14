@@ -1,69 +1,69 @@
-japanese_notation,universal_notation
-アラセゴン,à la seconde
-アチチュード,attitude
-アラベスク,arabesque
-アロンジェ,allongé
-アン・トゥールナン,en tournant
-アンファス,en face
-アンレール,en l' air
-アントルシャ・カトル,entrechat quatre
-アントルシャ・シス,entrechat six
-アントルシャ・ロワイヤル,entrechat royale
-アントルラッセ,entrelacé
-アンボワテ,emboite
-エカルテ,ecarte
-エシャッペ,echappe 
-エファッセ,efface
-エポールマン,epaulement
-カブリオール,cabriole
-カンブレ,cambre
-クッペ,coupé
-グランジュッテ,grand jete
-グランパドゥシャ,grand pas de chat
-グランピルエット,grande pirouette
-グリッサード,glissade
-クロワゼ,croise
-シェネ,chaines
-シソンヌ,sissonne
-シャッセ,chassé
-シャンジュマン,changement
-ジュッテ,jeté
-クドゥピエ,sur le Cou-de-pied
-スーブルソー,soubresaut
-スッス,Sous-sus
-ストゥニュ,soutenu
-スプリッツ,the splits
-ソデバスク,Saut de basque
-ソッテ,sauté ・sautée
-タンリエ,temps lie
-タンルベ,temps leve
-タンジュ,tendu
-デガジェ,dégagé
-トンべ,tombé
-パドブレ,pas de bourree
-パドゥシャ,pas de chat
-パドゥシュヴァル,pas de cheval
-パドゥバスク,pas de Basque
-パドゥポワッソン,pas de poisson
-パッセ,passe
-バッチュ,battu
-バランセ,balance
-バロッテ,ballotte
-バロネ,ballonne
-パンシェ,penchee
-ピケ,pique
-ファイイ,failli
-フェッテ,fouette
-フォンデュ,fondu
-フラッペ,battement frappe
-プリエ,plie
-ブリゼ,brisé
-ブリゼボーレ,brisé volé
-フリック・フラック,flic-flac
-プロムナード ,promenade
-ポールドブラ,port de bras
-マズルカ,Mazurka
-マネージ,manege
-ランヴェルセ,renverse
-ルティレ,retire
-ロン・ドゥ・ジャンブ,rond de jambe
+id,japanese_notation,universal_notation
+1,アラセゴン,à la seconde
+2,アチチュード,attitude
+3,アラベスク,arabesque
+4,アロンジェ,allongé
+5,アン・トゥールナン,en tournant
+6,アンファス,en face
+7,アンレール,en l' air
+8,アントルシャ・カトル,entrechat quatre
+9,アントルシャ・シス,entrechat six
+10,アントルシャ・ロワイヤル,entrechat royale
+11,アントルラッセ,entrelacé
+12,アンボワテ,emboite
+13,エカルテ,ecarte
+14,エシャッペ,echappe 
+15,エファッセ,efface
+16,エポールマン,epaulement
+17,カブリオール,cabriole
+18,カンブレ,cambre
+19,クッペ,coupé
+20,グランジュッテ,grand jete
+21,グランパドゥシャ,grand pas de chat
+22,グランピルエット,grande pirouette
+23,グリッサード,glissade
+24,クロワゼ,croise
+25,シェネ,chaines
+26,シソンヌ,sissonne
+27,シャッセ,chassé
+28,シャンジュマン,changement
+29,ジュッテ,jeté
+30,クドゥピエ,sur le Cou-de-pied
+31,スーブルソー,soubresaut
+32,スッス,Sous-sus
+33,ストゥニュ,soutenu
+34,スプリッツ,the splits
+35,ソデバスク,Saut de basque
+36,ソッテ,sauté ・sautée
+37,タンリエ,temps lie
+38,タンルベ,temps leve
+39,タンジュ,tendu
+40,デガジェ,dégagé
+41,トンべ,tombé
+42,パドブレ,pas de bourree
+43,パドゥシャ,pas de chat
+44,パドゥシュヴァル,pas de cheval
+45,パドゥバスク,pas de Basque
+46,パドゥポワッソン,pas de poisson
+47,パッセ,passe
+48,バッチュ,battu
+49,バランセ,balance
+50,バロッテ,ballotte
+51,バロネ,ballonne
+52,パンシェ,penchee
+53,ピケ,pique
+54,ファイイ,failli
+55,フェッテ,fouette
+56,フォンデュ,fondu
+57,フラッペ,battement frappe
+58,プリエ,plie
+59,ブリゼ,brisé
+60,ブリゼボーレ,brisé volé
+61,フリック・フラック,flic-flac
+62,プロムナード ,promenade
+63,ポールドブラ,port de bras
+64,マズルカ,Mazurka
+65,マネージ,manege
+66,ランヴェルセ,renverse
+67,ルティレ,retire
+68,ロン・ドゥ・ジャンブ,rond de jambe
