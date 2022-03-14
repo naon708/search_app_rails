@@ -2,7 +2,8 @@ require 'csv'
 
 csv = CSV.read('db/fixtures/csv/programs.csv')
 csv[0, 1] = []
-csv.each do |program|
+csv.each.with_index(1) do |program, index|
+  id = index
   japanese_notation = program[0]
   wikipedia_path = program[1]
   universal_notation = program[2]
@@ -10,6 +11,7 @@ csv.each do |program|
   name_order = program[4]
 
   Program.seed do |s|
+    s.id = id
     s.japanese_notation = japanese_notation
     s.wikipedia_path = wikipedia_path
     s.universal_notation = universal_notation
