@@ -3,12 +3,12 @@ require 'csv'
 csv = CSV.read('db/fixtures/csv/programs.csv')
 csv[0, 1] = []
 csv.each.with_index(1) do |program, index|
-  id = index
-  japanese_notation = program[0]
-  wikipedia_path = program[1]
-  universal_notation = program[2]
-  russian_notation = program[3]
-  name_order = program[4]
+  id = program[0]
+  japanese_notation = program[1]
+  wikipedia_path = program[2]
+  universal_notation = program[3]
+  russian_notation = program[4]
+  name_order = program[5]
 
   Program.seed do |s|
     s.id = id
