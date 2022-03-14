@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_13_091730) do
+ActiveRecord::Schema.define(version: 2022_03_14_102445) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "dancers", force: :cascade do |t|
+    t.string "japanese_notation", null: false
+    t.string "universal_notation", null: false
+    t.string "russian_notation"
+    t.string "name_order", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "programs", force: :cascade do |t|
     t.string "japanese_notation", null: false
@@ -25,4 +34,28 @@ ActiveRecord::Schema.define(version: 2022_03_13_091730) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "steps", force: :cascade do |t|
+    t.string "japanese_notation", null: false
+    t.string "universal_notation", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "variation_programs", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "variations", force: :cascade do |t|
+    t.bigint "variation_program_id", null: false
+    t.string "title", null: false
+    t.string "japanese_notation", null: false
+    t.string "universal_notation", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["variation_program_id"], name: "index_variations_on_variation_program_id"
+  end
+
+  add_foreign_key "variations", "variation_programs"
 end
