@@ -2,7 +2,7 @@ require 'csv'
 
 csv = CSV.read('db/fixtures/csv/variation_programs.csv')
 csv[0, 1] = []
-csv.each.with_index(1) do |variation_program, index|
+csv.each do |variation_program|
   id = variation_program[0]
   name = variation_program[1]
 
