@@ -9,9 +9,8 @@ class Api::V1::SearchesController < ApplicationController
     search_results = youtube.list_searches(
       :snippet,
       type: "video",
-      q: 'ひかる',
-      # q: params[:q],
-      max_results: 1,
+      q: params[:q],
+      max_results: 5,
       video_embeddable: true,
       fields: 'items(id(videoId), snippet(title, description, thumbnails(medium(url))))'
     )
@@ -32,7 +31,7 @@ class Api::V1::SearchesController < ApplicationController
       snippet = item.snippet
       thumbnail_url = snippet.thumbnails.medium.url
       # < 動画タイトル・概要・サムネ・再生回数 > を返す
-      @response << { title: snippet.title, description: snippet.description, thumbnail: thumbnail_url, view_count: view_count }
+      @response << { video_id: video_id, title: snippet.title, description: snippet.description, thumbnail: thumbnail_url, view_count: view_count }
     end
 
     render json: @response
