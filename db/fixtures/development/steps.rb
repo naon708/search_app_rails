@@ -2,7 +2,7 @@ require 'csv'
 
 csv = CSV.read('db/fixtures/csv/steps.csv')
 csv[0, 1] = []
-csv.each.with_index(1) do |step, index|
+csv.each do |step|
   id = step[0]
   japanese_notation = step[1]
   universal_notation = step[2]
