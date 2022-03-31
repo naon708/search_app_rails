@@ -8,7 +8,10 @@ Rails.application.routes.draw do
       resources :dancers, only: %i[index]
 
       resources :search_results, only: %i[index]
+
+      post '/register', to: 'users#create'
+      post '/login', to: 'sessions#create'
+      resource :user, only: %i[show]
     end
   end
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
