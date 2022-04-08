@@ -72,4 +72,4 @@ YouTubeのバレエ動画視聴において、
 ### 画面遷移図
 https://www.figma.com/file/lsv4Y8c5onHsUPWcx5eWWL/Untitled?node-id=3%3A14
 ### ER図
-https://gyazo.com/5cb5ef6a3173808042e3a11d3e2002dc
+https://drive.google.com/file/d/1_bMo1eyOCCL9uOW50VRamtrW7OL-3CF_/view?usp=sharing
