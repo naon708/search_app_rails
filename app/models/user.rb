@@ -4,5 +4,4 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :name, uniqueness: { message: '他のニックネームをお試しください。' }
   validates :name, length: { in: 6..20 }
-  validates :password_digest, presence: true
 end
