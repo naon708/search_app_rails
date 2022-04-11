@@ -7,6 +7,7 @@ RSpec.describe "Api::V1::Programs", type: :request do
       get api_v1_programs_path
       expect(response).to have_http_status(200)
     end
+
     it "return the contents of program" do
       create(:program)
       get api_v1_programs_path
