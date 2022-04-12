@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_secure_password
+  has_many :mark_programs, dependent: :destroy
 
   validates :name, presence: true
   validates :name, uniqueness: { message: '他のニックネームをお試しください。' }

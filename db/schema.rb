@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_31_010826) do
+ActiveRecord::Schema.define(version: 2022_04_12_021714) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(version: 2022_03_31_010826) do
     t.string "name_order", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "mark_programs", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "program_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["program_id"], name: "index_mark_programs_on_program_id"
+    t.index ["user_id", "program_id"], name: "index_mark_programs_on_user_id_and_program_id", unique: true
+    t.index ["user_id"], name: "index_mark_programs_on_user_id"
   end
 
   create_table "programs", force: :cascade do |t|
@@ -77,5 +87,7 @@ ActiveRecord::Schema.define(version: 2022_03_31_010826) do
     t.index ["variation_program_id"], name: "index_variations_on_variation_program_id"
   end
 
+  add_foreign_key "mark_programs", "programs"
+  add_foreign_key "mark_programs", "users"
   add_foreign_key "variations", "variation_programs"
 end
