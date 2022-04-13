@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_12_021714) do
+ActiveRecord::Schema.define(version: 2022_04_13_074217) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,16 @@ ActiveRecord::Schema.define(version: 2022_04_12_021714) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "mark_dancers", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "dancer_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["dancer_id"], name: "index_mark_dancers_on_dancer_id"
+    t.index ["user_id", "dancer_id"], name: "index_mark_dancers_on_user_id_and_dancer_id", unique: true
+    t.index ["user_id"], name: "index_mark_dancers_on_user_id"
+  end
+
   create_table "mark_programs", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "program_id", null: false
@@ -32,6 +42,26 @@ ActiveRecord::Schema.define(version: 2022_04_12_021714) do
     t.index ["program_id"], name: "index_mark_programs_on_program_id"
     t.index ["user_id", "program_id"], name: "index_mark_programs_on_user_id_and_program_id", unique: true
     t.index ["user_id"], name: "index_mark_programs_on_user_id"
+  end
+
+  create_table "mark_steps", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "step_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["step_id"], name: "index_mark_steps_on_step_id"
+    t.index ["user_id", "step_id"], name: "index_mark_steps_on_user_id_and_step_id", unique: true
+    t.index ["user_id"], name: "index_mark_steps_on_user_id"
+  end
+
+  create_table "mark_variations", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "variation_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id", "variation_id"], name: "index_mark_variations_on_user_id_and_variation_id", unique: true
+    t.index ["user_id"], name: "index_mark_variations_on_user_id"
+    t.index ["variation_id"], name: "index_mark_variations_on_variation_id"
   end
 
   create_table "programs", force: :cascade do |t|
@@ -87,7 +117,13 @@ ActiveRecord::Schema.define(version: 2022_04_12_021714) do
     t.index ["variation_program_id"], name: "index_variations_on_variation_program_id"
   end
 
+  add_foreign_key "mark_dancers", "dancers"
+  add_foreign_key "mark_dancers", "users"
   add_foreign_key "mark_programs", "programs"
   add_foreign_key "mark_programs", "users"
+  add_foreign_key "mark_steps", "steps"
+  add_foreign_key "mark_steps", "users"
+  add_foreign_key "mark_variations", "users"
+  add_foreign_key "mark_variations", "variations"
   add_foreign_key "variations", "variation_programs"
 end

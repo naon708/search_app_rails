@@ -14,6 +14,9 @@ Rails.application.routes.draw do
       resource :user, only: %i[show]
 
       resources :mark_programs, only: %i[create destroy]
+      resources :mark_dancers, only: %i[create destroy]
+      resources :mark_steps, only: %i[create destroy]
+      resources :mark_variations, only: %i[create destroy]
     end
   end
 end

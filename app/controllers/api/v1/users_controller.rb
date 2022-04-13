@@ -13,7 +13,13 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def show
-    user_info = { name: @current_user.name, markedProgramIds: @current_user.mark_programs.pluck(:program_id) }
+    user_info = {
+      name: @current_user.name,
+      markedProgramIds: @current_user.mark_programs.pluck(:program_id),
+      markedDancerIds: @current_user.mark_dancers.pluck(:dancer_id),
+      markedStepIds: @current_user.mark_steps.pluck(:step_id),
+      markedVariationIds: @current_user.mark_variations.pluck(:variation_id),
+    }
     render json: { user: user_info }
   end
 

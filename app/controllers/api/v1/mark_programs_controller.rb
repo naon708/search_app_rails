@@ -4,17 +4,13 @@ class Api::V1::MarkProgramsController < ApplicationController
 
   def create
     program = Program.find(params[:program_id])
-    if @current_user.marking(program)
-      render json: @current_user.mark_programs
-    end
+    @current_user.marking(program)
+    render json: { status: 200 }
   end
 
   def destroy
     program = @current_user.mark_programs.find_by(program_id: params[:id]).program
-    if @current_user.unmarking(program)
-      render json: { errors: '削除しました', status: 204 }
-    else
-      render json: { errors: '失敗', status: 404 }
-    end
+    @current_user.unmarking(program)
+    render json: { status: 204 }
   end
 end
