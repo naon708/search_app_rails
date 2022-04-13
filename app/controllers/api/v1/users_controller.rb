@@ -1,5 +1,6 @@
 class Api::V1::UsersController < ApplicationController
   include JwtAuthenticator
+  before_action :jwt_authenticate, only: %i[show]
 
   def create
     user = User.new(user_params)
@@ -12,8 +13,7 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def show
-    jwt_authenticate
-    user_info = { name: @current_user.name }
+    user_info = { name: @current_user.name, markedProgramIds: @current_user.mark_programs.pluck(:program_id) }
     render json: { user: user_info }
   end
 

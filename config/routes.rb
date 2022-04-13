@@ -12,6 +12,8 @@ Rails.application.routes.draw do
       post '/register', to: 'users#create'
       post '/login', to: 'sessions#create'
       resource :user, only: %i[show]
+
+      resources :mark_programs, only: %i[create destroy]
     end
   end
 end
