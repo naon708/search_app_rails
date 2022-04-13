@@ -6,13 +6,11 @@ class Api::V1::SearchResultsController < ApplicationController
     @response = []
 
     if @saved_search_results.present? && @saved_search_results.first.recently?
-      # binding.irb
       return_from_database
       return render json: @response
     end
 
     if @saved_search_results.present? && !@saved_search_results.first.recently?
-      # binding.irb
       begin
         get_search_results(params[:q])
         update_search_results(@youtube_api_response, @saved_search_results)
@@ -21,7 +19,6 @@ class Api::V1::SearchResultsController < ApplicationController
         return_from_database
       end
     else
-      # binding.irb
       begin
         get_search_results(params[:q])
         save_search_results(@youtube_api_response, params[:q])
