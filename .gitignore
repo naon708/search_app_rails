@@ -27,3 +27,4 @@
 /config/master.key
 
 /vendor/bundle
+/db/fixtures/csv/*
