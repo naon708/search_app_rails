@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_13_074217) do
+ActiveRecord::Schema.define(version: 2022_04_27_100234) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "dancers", force: :cascade do |t|
-    t.string "japanese_notation", null: false
+    t.string "japanese_notation"
     t.string "universal_notation", null: false
     t.string "russian_notation"
     t.string "name_order", null: false
