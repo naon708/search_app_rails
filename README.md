@@ -1,43 +1,38 @@
 ## **■ Pinap | ピナップ**
 
 [![rails](https://img.shields.io/badge/Rails-6.1.4.6-red)](https://rubygems.org/gems/rails/versions/6.1.4.6)
-
 [![nuxt](https://img.shields.io/badge/Nuxt.js-2.15.8-brightgreen)](https://www.npmjs.com/package/nuxt/v/2.15.8)
 
 ![pinap_ogp](https://user-images.githubusercontent.com/77439261/165692368-f134c958-2d29-436d-a518-1069a630309f.png)
 
 ## ****■ リポジトリ****
 
----
-
 ### バックエンド
-
 https://github.com/naon708/search_app_rails
 
 ### フロントエンド
-
 https://github.com/naon708/search_app_nuxt
 
 ## ****■ サービスURL****
----
+
 https://pinap.jp/
 
 ## ****■ サービス概要****
----
+
 バレエ動画を、用語の一覧から検索・視聴できるサービスです。
 
 ## ****■ ユーザーの悩み****
----
+
 - バレエ動画をYouTubeで検索したいが、用語がパッと浮かばない。
 - 英語、フランス語などで検索するとヒット率が上がるが、いちいちスペルを調べるのが手間。
 
 ## ****■ このサービスを使うことで...****
----
+
 - 一覧表示画面から数回ポチポチするだけで検索・視聴ができる。
 - 知見が広がり、より多くのバレエ動画に出会える。
 
 ## ****■ 主なページと機能****
----
+
 | トップページ | 演目一覧ページ |
 | ---- | ---- |
 | [![Image from Gyazo](https://i.gyazo.com/3c2e6477de67abb52e167fd9f149d1a8.gif)](https://gyazo.com/3c2e6477de67abb52e167fd9f149d1a8) | [![Image from Gyazo](https://i.gyazo.com/be9e44e69b86a1d0ab91d744f935c6f8.gif)](https://gyazo.com/be9e44e69b86a1d0ab91d744f935c6f8) |
@@ -59,7 +54,7 @@ https://pinap.jp/
 | フロントでもValidationをかけ、送信ボタンを制御しています。多重送信対策も行いました。 | お知らせ内容のデータはFirestoreで保持しています。GUIで手軽に更新できるためです。 |
 
 ## ****■ 使用技術****
----
+
 ### **バックエンド**
 
 - Ruby 3.0.1
