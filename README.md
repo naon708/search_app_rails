@@ -1,7 +1,7 @@
 [![rails](https://img.shields.io/badge/Rails-6.1.4.6-red)](https://rubygems.org/gems/rails/versions/6.1.4.6)
 [![nuxt](https://img.shields.io/badge/Nuxt.js-2.15.8-brightgreen)](https://www.npmjs.com/package/nuxt/v/2.15.8)
 
-# **■ Pinap | ピナップ**
+# **Pinap | ピナップ**
 
 ![pinap_ogp](https://user-images.githubusercontent.com/77439261/165692368-f134c958-2d29-436d-a518-1069a630309f.png)
 
