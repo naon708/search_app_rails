@@ -15,6 +15,7 @@ RSpec.describe "Api/V1/Dancers", type: :request do
       expect(dancer["japanese_notation"]).to eq('アダム・クーパー')
       expect(dancer["universal_notation"]).to eq('Adam Cooper')
       expect(dancer["name_order"]).to eq('アダムクーパー')
+      expect(dancer["title"]).to eq('アダム・クーパー')
     end
   end
 end
