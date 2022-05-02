@@ -8,6 +8,7 @@ csv.each do |dancer|
   name_order = dancer[2]
   universal_notation = dancer[3]
   russian_notation = dancer[4]
+  title = dancer[5]
 
   Dancer.seed do |s|
     s.id = id
@@ -15,6 +16,7 @@ csv.each do |dancer|
     s.universal_notation = universal_notation
     s.russian_notation = russian_notation
     s.name_order = name_order
+    s.title = title
   end
 end
 
