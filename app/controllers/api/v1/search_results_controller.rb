@@ -5,12 +5,9 @@ class Api::V1::SearchResultsController < ApplicationController
     @saved_search_results = SearchResult.where(search_word: params[:q])
     @response = []
 
-    if @saved_search_results.present? && @saved_search_results.first.recently?
+    if saved_and_recent?
       return_from_database
-      return render json: @response
-    end
-
-    if @saved_search_results.present? && !@saved_search_results.first.recently?
+    elsif saved_and_old?
       begin
         get_search_results(params[:q])
         update_search_results(@youtube_api_response, @saved_search_results)
@@ -32,6 +29,14 @@ class Api::V1::SearchResultsController < ApplicationController
   end
 
   private
+
+  def saved_and_recent?
+    @saved_search_results.present? && @saved_search_results.first.recently?
+  end
+
+  def saved_and_old?
+    @saved_search_results.present? && !@saved_search_results.first.recently?
+  end
 
   def return_from_database
     @saved_search_results.each do |result|
