@@ -17,6 +17,8 @@ Rails.application.routes.draw do
       resources :mark_dancers, only: %i[create destroy]
       resources :mark_steps, only: %i[create destroy]
       resources :mark_variations, only: %i[create destroy]
+
+      resources :in_app_searches, only: %i[index]
     end
   end
 end
