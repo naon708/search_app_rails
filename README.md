@@ -86,6 +86,12 @@ https://pinap.jp/
 
 - YouTube Data API
 
+## ****■ デプロイ****
+
+[![Image from Gyazo](https://i.gyazo.com/75c69270074b30fed1e78a5e3f8420e1.png)](https://gyazo.com/75c69270074b30fed1e78a5e3f8420e1)
+
+[https://gyazo.com/75c69270074b30fed1e78a5e3f8420e1](https://gyazo.com/75c69270074b30fed1e78a5e3f8420e1)
+
 ## ****■ ER図****
 
 [![Image from Gyazo](https://i.gyazo.com/40e83eb90e8e47a4e877981e766ffbd7.png)](https://gyazo.com/40e83eb90e8e47a4e877981e766ffbd7)
@@ -96,9 +102,11 @@ https://pinap.jp/
 
 [https://www.figma.com/file/lsv4Y8c5onHsUPWcx5eWWL/Untitled?node-id=3%3A14](https://www.figma.com/file/lsv4Y8c5onHsUPWcx5eWWL/Untitled?node-id=3%3A14)
 
-## ****■ その他****
+## ****■ 実績****
 
 - MVPリリース（Nuxt.js × Firebase）
-    - 累計PV数：6000回
-    - UU数：1600人
-- 本リリース（Firebase→Rails）
+    - UU数：1,200人
+    - 累計PV数：5,000回
+- 本リリース（Nuxt.js × Ruby on Rails）
+    - UU数：2,600人
+    - 累計PV数：13,000回
