@@ -19,6 +19,7 @@ Rails.application.routes.draw do
       resources :mark_variations, only: %i[create destroy]
 
       resources :in_app_searches, only: %i[index]
+      resources :autocompletes, only: %i[index]
     end
   end
 end
