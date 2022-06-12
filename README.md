@@ -13,6 +13,10 @@ https://github.com/naon708/search_app_rails
 ### フロントエンド
 https://github.com/naon708/search_app_nuxt
 
+## ****■ サービス紹介動画****
+
+[![サービス紹介動画](https://i.gyazo.com/50925b29b3e9ad2003075973f0e26fab.jpg)](https://youtu.be/5aKI900iGVo?t=2949)
+
 ## ****■ サービスURL****
 
 https://pinap.jp/
